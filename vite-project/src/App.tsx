@@ -6,7 +6,7 @@ import userData from "./userData";
 // import icon
 import icon from "./assets/icon.png";
 
-function App() {
+function DataTable() {
   const [showData, setShowData] = useState(userData);
 
   return (
@@ -36,6 +36,18 @@ function App() {
           </div>
         );
       })}
+    </div>
+  );
+}
+
+function App() {
+  return (
+    <div className="grid justify-center">
+      <div className="max-w-xl bg-slate-700 p-10">
+        <div className=" bg-orange-300 rounded-lg">
+          <DataTable />
+        </div>
+      </div>
     </div>
   );
 }
