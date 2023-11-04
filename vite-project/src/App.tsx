@@ -14,7 +14,7 @@ function App() {
           return (
             <>
               <li key={user.id}>{`${user.first_name} ${user.last_name}`}</li>
-              <li key={user.email}></li>
+              <li key={user.email}>{user.email}</li>
             </>
           );
         })}
