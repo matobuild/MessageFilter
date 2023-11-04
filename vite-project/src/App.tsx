@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import React, { useState } from "react";
 
 //mock data
 import userData from "./userData";
@@ -8,6 +8,8 @@ import icon from "./assets/icon.png";
 
 function DataTable() {
   const [showData, setShowData] = useState(userData);
+
+  // todo: display the data`
 
   return (
     <div className="container p-5">
@@ -41,6 +43,22 @@ function DataTable() {
 }
 
 function Search() {
+  const [value, setValue] = useState("");
+
+  const findData = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setValue(event.target.value);
+    const textFind = event.target.value;
+    if (textFind.length > 2) {
+      // todo: search the input data
+      // todo: need to input the DATA so can use the value show DATA, how to pass data betwee function
+      // const person  = showData.filter(
+      //             (showData) => {
+      //               showData.first_name.include(textFind) ||
+      //             }
+      // )
+    }
+  };
+
   return (
     <div className="py-7 ">
       <div className="  rounded-lg bg-white px-5">
@@ -49,6 +67,8 @@ function Search() {
             className="w-full h-12"
             type="text"
             placeholder="Search"
+            value={value}
+            onChange={findData}
           ></input>
         </form>
       </div>
