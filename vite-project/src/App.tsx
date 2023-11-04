@@ -40,12 +40,33 @@ function DataTable() {
   );
 }
 
+function Search() {
+  return (
+    <div className="py-7 ">
+      <div className="  rounded-lg bg-white px-5">
+        <form>
+          <input
+            className="w-full h-12"
+            type="text"
+            placeholder="Search"
+          ></input>
+        </form>
+      </div>
+    </div>
+  );
+}
+
 function App() {
   return (
     <div className="grid justify-center">
       <div className="max-w-xl bg-slate-700 p-10">
+        <div>
+          <Search />
+        </div>
         <div className=" bg-orange-300 rounded-lg">
-          <DataTable />
+          <div>
+            <DataTable />
+          </div>
         </div>
       </div>
     </div>
