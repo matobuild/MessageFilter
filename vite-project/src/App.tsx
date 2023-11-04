@@ -59,12 +59,12 @@ function Search() {
 function App() {
   return (
     <div className="grid justify-center">
-      <div className="max-w-xl bg-slate-700 p-10">
-        <div>
-          <Search />
-        </div>
-        <div className=" bg-orange-300 rounded-lg">
-          <div>
+      <div className="max-w-xl h-2/4  bg-slate-700 p-10">
+        <div className="h-full">
+          <div className="h-1/6">
+            <Search />
+          </div>
+          <div className="h-5/6 bg-orange-300 rounded-lg overflow-auto">
             <DataTable />
           </div>
         </div>
