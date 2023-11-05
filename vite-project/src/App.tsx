@@ -42,15 +42,11 @@ function Search() {
   const findData = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
     const textFind = event.target.value;
+    console.log(textFind);
+
     if (textFind.length > 2) {
-      // todo:get input value
-      // todo: search the input data
-      // todo: need to input the DATA so can use the value show DATA, how to pass data betwee function
-      // const person  = showData.filter(
-      //             (showData) => {
-      //               showData.first_name.include(textFind) ||
-      //             }
-      // )
+      const array = showData;
+      // need to pass value (showData) from DATATABLE TO SEARCH!!!!
     }
   };
 
@@ -89,3 +85,6 @@ function App() {
 }
 
 export default App;
+
+// todo: search the input data
+// todo: need to put the DATA so can use the value show DATA, how to pass data betwee function
